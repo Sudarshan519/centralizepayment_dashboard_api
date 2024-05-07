@@ -9,6 +9,7 @@ import json
 import base64
 
 
+
 # Create FastAPI instance
 app = FastAPI()
 env_path = Path('.') / '.env'
