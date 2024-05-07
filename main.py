@@ -16,7 +16,7 @@ env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 
-cred = credentials.Certificate(json.loads(os.getenv("ADMIN_SDK"))) #'rockstar-dashboard-710d7-firebase-adminsdk-3hhjb-7a0b4953ce.json')
+cred = credentials.Certificate(json.loads(os.getenv("ADMIN_SDK"))) 
 initialize_app(cred)
 security = HTTPBearer()
 # Firestore client
