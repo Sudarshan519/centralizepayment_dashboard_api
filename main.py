@@ -42,7 +42,7 @@ def authenticate_user(credentials: HTTPAuthorizationCredentials = Depends(securi
     return True
 
 # Define endpoint to get document by email
-@app.get("/getBillingsByEmail/{email}")
+@app.get("/getBillingsByEmail")
 async def get_doc_by_email(token: Annotated[str, Depends(security)],email: str,request:Request):
     user = get_user(token)
     if user is None:
