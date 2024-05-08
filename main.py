@@ -59,7 +59,7 @@ async def get_doc_by_email(token: Annotated[str, Depends(security)],email: str,r
         # Check if any documents match the query result
         for doc in docs:
             data.append(doc.to_dict())
-        return data;
+        return data
         # If no document found
         raise HTTPException(status_code=404, detail="No billing found for user." )
 
