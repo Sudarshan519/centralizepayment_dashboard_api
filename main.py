@@ -55,11 +55,11 @@ async def get_doc_by_email(token: Annotated[str, Depends(security)],email: str,r
         # Query Firestore collection based on email
         docs_ref = db.collection('billing').where('user', '==', email).limit(1)
         docs = docs_ref.get()
-
+        data=[]
         # Check if any documents match the query result
         for doc in docs:
-            return doc.to_dict()
-
+            data.append(doc.to_dict())
+        return data;
         # If no document found
         raise HTTPException(status_code=404, detail="No billing found for user." )
 
