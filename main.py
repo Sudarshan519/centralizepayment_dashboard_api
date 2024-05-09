@@ -10,7 +10,8 @@ import base64
 
 from fastapi.middleware.cors import CORSMiddleware
 origins = [
-    "define-your-monment-story.flutterflow.app"
+    "https://define-your-monment-story.flutterflow.app",
+    "https://sales-ai.flutterflow.app",
 ]
 # Create FastAPI instance
 app = FastAPI()
